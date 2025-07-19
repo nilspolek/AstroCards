@@ -9,7 +9,7 @@ AstroCards is a command-line tool that generates flashcards (question/answer pai
 - Customizable Ollama server URL and model
 
 ## Requirements
-- [Go](https://go.dev/doc/install) 1.21 or newer
+- [Go](https://go.dev/doc/install) 1.24.4 or newer
 - [Ollama](https://ollama.com/) running locally or remotely
   - See [Ollama's installation guide](https://ollama.com/download) for your platform
   - Start Ollama with a model, e.g. `ollama run llama3`
@@ -19,15 +19,15 @@ AstroCards is a command-line tool that generates flashcards (question/answer pai
 Install AstroCards using Go:
 
 ```sh
-go install github.com/nilspolek/AstroCards/cmd/pdf2card@latest
+go install github.com/nilspolek/AstroCards/cmd/astro-cards@latest
 ```
 
-This will install the `pdf2card` binary in your `$GOPATH/bin` (usually `$HOME/go/bin`). Make sure this directory is in your `PATH`.
+This will install the `astro-cards` binary in your `$GOPATH/bin` (usually `$HOME/go/bin`). Make sure this directory is in your `PATH`.
 
 ## Usage
 
 ```sh
-pdf2card --pdf <input.pdf> [--ollama <ollama_url>] [--model <model_name>] [--output <output.json>]
+astro-cards --pdf <input.pdf> [--ollama <ollama_url>] [--model <model_name>] [--output <output.json>]
 ```
 
 - `--pdf` (required): Path to the input PDF file
@@ -43,7 +43,7 @@ pdf2card --pdf <input.pdf> [--ollama <ollama_url>] [--model <model_name>] [--out
    ```
 2. Generate cards from a PDF:
    ```sh
-   pdf2card --pdf my_notes.pdf --output cards.json
+   astro-cards --pdf my_notes.pdf --output cards.json
    ```
 
 ## Output Format
